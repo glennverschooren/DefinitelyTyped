@@ -1,6 +1,7 @@
 // Type definitions for Chance 0.7.3
 // Project: http://chancejs.com
 // Definitions by: Chris Bowdon <https://github.com/cbowdon>
+//                 Glenn Verschooren <https://github.com/glennverschooren>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
 declare namespace Chance {
@@ -61,7 +62,9 @@ declare namespace Chance {
         wp8_anid2(): string;
 
         // Web
+        avatar(opts?: Options): string;
         color(opts?: Options): string;
+        company(): string;
         domain(opts?: Options): string;
         email(opts?: Options): string;
         fbid(): string;
@@ -70,6 +73,7 @@ declare namespace Chance {
         ip(): string;
         ipv6(): string;
         klout(): string;
+        profession(opts?: Options): string;
         tld(): string;
         twitter(): string;
         url(opts?: Options): string;
@@ -128,7 +132,7 @@ declare namespace Chance {
         pick<T>(arr: T[]): T;
         pickone<T>(arr: T[]): T;
         /**
-         * @deprecated Use pickset 
+         * @deprecated Use pickset
          */
         pick<T>(arr: T[], count: number): T[];
         pickset<T>(arr: T[], count?: number): T[];

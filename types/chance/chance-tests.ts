@@ -1,5 +1,3 @@
-
-
 // Instantiation
 var globalInstance: Chance.Chance = chance;
 var createYourOwn = new Chance(Math.random);
@@ -17,6 +15,13 @@ var uniqInts: number[] = chance.unique(chance.integer, 99);
 var currencyPair = chance.currency_pair();
 var firstCurrency = currencyPair[0];
 var secondCurrency = currencyPair[1];
+
+// web
+var randomAvatar = chance.avatar();
+var randomAvatarWithProtocols = chance.avatar({ Protocol: 'https' });
+var randomCompany = chance.company();
+var randomProfession = chance.profession();
+var randomProfessionRank = chance.profession({ rank: true })
 
 // Mixins can be used with on-the-fly type declaration
 declare namespace Chance {
